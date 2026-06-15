@@ -1,11 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Passrush</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[Your Name] | Personal Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --field-black: #0d0d0d;
+      --yardline-gray: #2c2c2c;
+      --chalk-white: #f0ede6;
+      --blitz-gold: #c9a84c;
+      --stat-silver: #a8a8a8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--field-black);
+      background-image: repeating-linear-gradient(
+        90deg, transparent, transparent 9.09%,
+        rgba(255,255,255,0.025) 9.09%, rgba(255,255,255,0.025) 9.2%
+      );
+      font-family: 'Inter', sans-serif;
+      color: var(--chalk-white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--blitz-gold);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5rem;
+      color: var(--chalk-white);
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: var(--stat-silver);
+      margin-bottom: 3rem;
+    }
+
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: var(--blitz-gold);
+      margin: 0 auto 3rem;
+    }
+
+    .nav-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .nav-card {
+      display: block;
+      background: var(--yardline-gray);
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 2rem 1.5rem;
+      text-decoration: none;
+      color: var(--chalk-white);
+      transition: border-color 0.2s, transform 0.15s, background 0.2s;
+    }
+
+    .nav-card:hover {
+      border-color: var(--blitz-gold);
+      background: #363636;
+      transform: translateY(-3px);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      color: var(--blitz-gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-desc {
+      font-size: 0.8rem;
+      color: var(--stat-silver);
+      line-height: 1.5;
+    }
+
+    .footer-text {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--stat-silver);
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 3.5rem; }
+      .nav-cards { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to Passrush</h1>
-    <p>My new GitHub Pages site is officially under construction!</p>
+  <div class="container">
+    <p class="eyebrow">Welcome</p>
+    <h1>[YOUR NAME]</h1>
+    <p class="subtitle">[Your Title / Major — e.g. Computer Science Student]</p>
+    <div class="divider"></div>
+
+    <div class="nav-cards">
+      <a href="resume.html" class="nav-card">
+        <span class="card-icon">📄</span>
+        <div class="card-title">Résumé</div>
+        <div class="card-desc">Education, experience, skills, and awards</div>
+      </a>
+      <a href="scratch.html" class="nav-card">
+        <span class="card-icon">🏈</span>
+        <div class="card-title">Pass Rush</div>
+        <div class="card-desc">A deep dive into the art of getting to the quarterback</div>
+      </a>
+      <a href="app.html" class="nav-card">
+        <span class="card-icon">🤖</span>
+        <div class="card-title">Scouting App</div>
+        <div class="card-desc">AI-powered pass rusher scouting report generator</div>
+      </a>
+    </div>
+
+    <p class="footer-text">[Your Name] &nbsp;·&nbsp; [Year]</p>
+  </div>
 </body>
 </html>
