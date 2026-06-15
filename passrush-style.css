@@ -1,0 +1,307 @@
+/* Pass Rush - Custom Stylesheet */
+
+/* === Font Imports === */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+/* === CSS Variables === */
+:root {
+  --field-black: #0d0d0d;
+  --turf-green: #1a3a1a;
+  --chalk-white: #f0ede6;
+  --blitz-gold: #c9a84c;
+  --pressure-red: #b52b2b;
+  --yardline-gray: #2c2c2c;
+  --stat-silver: #a8a8a8;
+}
+
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Body === */
+body {
+  background-color: var(--field-black);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 9.09%,
+      rgba(255,255,255,0.03) 9.09%,
+      rgba(255,255,255,0.03) 9.2%
+    );
+  font-family: 'Inter', sans-serif;
+  color: var(--chalk-white);
+  line-height: 1.6;
+}
+
+/* === Typography === */
+h1, h2, h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+  color: var(--blitz-gold);
+}
+
+h1 { font-size: 4rem; line-height: 1; }
+h2 { font-size: 2.4rem; margin-bottom: 1rem; }
+h3 { font-size: 1.6rem; color: var(--chalk-white); }
+
+p {
+  font-family: 'Inter', sans-serif;
+  color: var(--stat-silver);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--blitz-gold);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--chalk-white);
+}
+
+/* === Navigation === */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  background-color: var(--yardline-gray);
+  border-bottom: 3px solid var(--blitz-gold);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-bar .logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--blitz-gold);
+  letter-spacing: 0.1em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--chalk-white);
+}
+
+.nav-links a:hover {
+  color: var(--blitz-gold);
+}
+
+/* === Hero Section Div === */
+.hero-div {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, rgba(26,58,26,0.3) 0%, transparent 100%);
+  border-bottom: 1px solid var(--yardline-gray);
+}
+
+.hero-div .tagline {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  color: var(--blitz-gold);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-div h1 {
+  font-size: 6rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 40px rgba(201,168,76,0.3);
+}
+
+.hero-div p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  margin: 0 auto 2rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background-color: var(--blitz-gold);
+  color: var(--field-black);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  border-radius: 2px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.cta-btn:hover {
+  background-color: var(--chalk-white);
+  color: var(--field-black);
+  transform: translateY(-2px);
+}
+
+/* === Content Div === */
+.content-div {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.section-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--blitz-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+/* === Image === */
+.image-container {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.image-container img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border: 1px solid var(--yardline-gray);
+  display: block;
+}
+
+.image-caption {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--stat-silver);
+  margin-top: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* === Lists === */
+ol.moves-list {
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: var(--chalk-white);
+  font-family: 'Inter', sans-serif;
+}
+
+ol.moves-list > li {
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  color: var(--blitz-gold);
+}
+
+ol.moves-list ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ol.moves-list ul li {
+  color: var(--stat-silver);
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+
+/* === Stats Grid Div === */
+.stats-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.stat-card {
+  background-color: var(--yardline-gray);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 2rem;
+  text-align: center;
+}
+
+.stat-card .number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  color: var(--blitz-gold);
+  display: block;
+}
+
+.stat-card .label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--stat-silver);
+}
+
+/* === Video Section === */
+.video-div {
+  background-color: var(--yardline-gray);
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  border-left: 4px solid var(--blitz-gold);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* === Tableau Section === */
+.tableau-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: var(--yardline-gray);
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+/* === Footer === */
+.site-footer {
+  background-color: var(--yardline-gray);
+  border-top: 3px solid var(--blitz-gold);
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--stat-silver);
+}
+
+/* === Anchor Target Offset === */
+.anchor-target {
+  scroll-margin-top: 80px;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero-div h1 { font-size: 3.5rem; }
+  .stats-div { grid-template-columns: 1fr; }
+  .nav-bar { padding: 1rem 1.5rem; }
+  .content-div { padding: 3rem 1.2rem; }
+}
