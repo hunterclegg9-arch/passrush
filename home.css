@@ -1,0 +1,488 @@
+/* ═══════════════════════════════════════════════════════
+   home.css  —  built entirely from scratch, no Bootstrap
+   Hunter Clegg · BYU Football Home Page
+   ═══════════════════════════════════════════════════════ */
+
+/* ── 1. Custom properties ─────────────────────────────── */
+:root {
+  --hc-blue:       #002E5D;   /* BYU Royal Blue */
+  --hc-blue-dark:  #001f3f;
+  --hc-blue-mid:   #1a5fa8;
+  --hc-white:      #ffffff;
+  --hc-off-white:  #f0f4f9;
+  --hc-black:      #0a0a0a;
+  --hc-gray:       #4a5568;
+  --hc-gray-light: #dde3ec;
+  --hc-accent:     #C5A028;   /* gold accent — used sparingly */
+
+  --hc-font-head:  Georgia, 'Times New Roman', serif;
+  --hc-font-body:  'Trebuchet MS', 'Helvetica Neue', Arial, sans-serif;
+  --hc-font-mono:  'Courier New', Courier, monospace;
+}
+
+/* ── 2. Reset ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--hc-font-body);      /* font-family style */
+  font-size: 1rem;
+  color: var(--hc-black);                /* font-color style */
+  background-color: var(--hc-off-white); /* background color */
+  line-height: 1.7;
+}
+
+/* ── 3. Nav ───────────────────────────────────────────── */
+.hc-nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: var(--hc-blue);
+  border-bottom: 3px solid var(--hc-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+}
+
+.hc-brand {
+  font-family: var(--hc-font-head);      /* font-family style */
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--hc-white);                /* font-color style */
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.hc-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.hc-nav-list a {
+  display: block;
+  padding: 0.4rem 0.85rem;
+  color: rgba(255,255,255,0.85);         /* font-color style */
+  font-family: var(--hc-font-body);      /* font-family style */
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.hc-nav-list a:hover,
+.hc-nav-list a.hc-active {
+  background-color: rgba(255,255,255,0.18);
+  color: var(--hc-white);               /* font-color style */
+}
+
+.hc-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.hc-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--hc-white);
+  border-radius: 2px;
+}
+
+/* ── 4. Hero (custom background color) ───────────────── */
+.hc-hero {
+  background-color: var(--hc-blue-dark);  /* custom background color */
+  background-image:
+    radial-gradient(ellipse at 60% 50%, rgba(0,63,128,0.7) 0%, transparent 70%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 50px,
+      rgba(255,255,255,0.015) 50px,
+      rgba(255,255,255,0.015) 51px
+    );
+  padding: 5.5rem 2rem 5rem;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+}
+
+.hc-hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.hc-hero-text { flex: 1; }
+
+.hc-eyebrow {
+  font-family: var(--hc-font-mono);      /* font-family style */
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);         /* font-color style */
+  margin-bottom: 0.9rem;
+}
+
+.hc-hero-title {
+  font-family: var(--hc-font-head);      /* font-family style */
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-weight: bold;
+  color: var(--hc-white);               /* font-color style */
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.hc-accent { color: var(--hc-accent); }
+
+.hc-hero-sub {
+  font-family: var(--hc-font-body);
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.78);         /* font-color style */
+  max-width: 520px;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.hc-cta-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hc-btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  background-color: var(--hc-white);
+  color: var(--hc-blue);                /* font-color style */
+  font-family: var(--hc-font-body);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+}
+.hc-btn:hover {
+  background-color: var(--hc-accent);
+  color: var(--hc-white);
+}
+
+.hc-btn-outline {
+  background-color: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  color: var(--hc-white);
+}
+.hc-btn-outline:hover {
+  background-color: rgba(255,255,255,0.12);
+  border-color: var(--hc-white);
+}
+
+/* Hero badge */
+.hc-hero-badge {
+  background-color: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+.hc-badge-num {
+  font-family: var(--hc-font-head);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--hc-accent);
+  line-height: 1;
+}
+.hc-badge-label {
+  font-family: var(--hc-font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.5rem;
+}
+
+/* ── 5. Stats strip (div for positioning) ────────────── */
+.hc-stats-strip {
+  background-color: var(--hc-blue);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.75rem 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-bottom: 3px solid var(--hc-white);
+}
+
+.hc-stat {
+  text-align: center;
+}
+.hc-stat-num {
+  display: block;
+  font-family: var(--hc-font-head);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--hc-white);
+  line-height: 1;
+}
+.hc-stat-desc {
+  display: block;
+  font-family: var(--hc-font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.55);
+  margin-top: 0.35rem;
+}
+
+/* ── 6. Section base (div for positioning) ───────────── */
+.hc-section {
+  padding: 4.5rem 2rem;
+}
+
+.hc-alt-bg {
+  background-color: var(--hc-white);
+}
+
+.hc-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hc-label {
+  font-family: var(--hc-font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--hc-blue-mid);
+  margin-bottom: 0.5rem;
+}
+
+.hc-section-title {
+  font-family: var(--hc-font-head);
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: var(--hc-blue);
+  margin-bottom: 0.9rem;
+  line-height: 1.2;
+}
+
+.hc-section-desc {
+  font-size: 0.975rem;
+  color: var(--hc-gray);
+  margin-bottom: 1.5rem;
+  max-width: 640px;
+  line-height: 1.75;
+}
+
+/* ── 7. YouTube embed ─────────────────────────────────── */
+.hc-video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 3px solid var(--hc-blue);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  margin-top: 1rem;
+}
+.hc-video-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+/* ── 8. Two-column about layout (div for positioning) ─── */
+.hc-two-col {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.hc-col-text {
+  flex: 2;
+  min-width: 280px;
+}
+.hc-col-text p {
+  color: var(--hc-gray);
+  font-size: 0.975rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+.hc-col-img {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+}
+.hc-logo-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+.hc-img-caption {
+  font-family: var(--hc-font-mono);
+  font-size: 0.72rem;
+  color: var(--hc-gray);
+  letter-spacing: 0.05em;
+}
+
+/* ── 9. Fun facts list (ordered + nested unordered) ───── */
+.hc-facts-list {
+  padding-left: 1.5rem;
+  margin-top: 1.25rem;
+}
+.hc-facts-list > li {
+  margin-bottom: 2rem;
+  color: var(--hc-black);
+}
+.hc-facts-list > li > strong {
+  display: block;
+  font-family: var(--hc-font-head);
+  font-size: 1.05rem;
+  color: var(--hc-blue);
+  margin-bottom: 0.35rem;
+}
+.hc-facts-list > li > p {
+  font-size: 0.9rem;
+  color: var(--hc-gray);
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
+}
+
+/* Unordered list nested inside ordered list */
+.hc-nested-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.35rem;
+}
+.hc-nested-list li {
+  font-size: 0.875rem;
+  color: var(--hc-gray);
+  margin-bottom: 0.25rem;
+  font-family: var(--hc-font-body);
+  line-height: 1.6;
+}
+
+/* ── 10. On-page anchor links ─────────────────────────── */
+.hc-anchor-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 360px;
+}
+.hc-anchor-list a {
+  display: block;
+  color: var(--hc-blue);
+  font-family: var(--hc-font-mono);
+  font-size: 0.875rem;
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-left: 3px solid var(--hc-blue);
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,46,93,0.06);
+  transition: background 0.2s, border-color 0.2s;
+}
+.hc-anchor-list a:hover {
+  background-color: rgba(0,46,93,0.14);
+  border-left-color: var(--hc-accent);
+  color: var(--hc-blue-dark);
+}
+
+/* ── 11. Page cards (div for positioning) ────────────── */
+.hc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.hc-card {
+  background-color: var(--hc-white);
+  border: 1px solid var(--hc-gray-light);
+  border-top: 4px solid var(--hc-blue);
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s, border-top-color 0.2s;
+}
+.hc-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,46,93,0.12);
+  border-top-color: var(--hc-accent);
+}
+.hc-card-icon {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.hc-card h3 {
+  font-family: var(--hc-font-head);
+  font-size: 1rem;
+  color: var(--hc-blue);
+  margin-bottom: 0.35rem;
+}
+.hc-card p {
+  font-size: 0.82rem;
+  color: var(--hc-gray);
+  line-height: 1.55;
+}
+
+/* ── 12. Footer ───────────────────────────────────────── */
+.hc-footer {
+  background-color: var(--hc-blue);
+  color: rgba(255,255,255,0.6);
+  font-family: var(--hc-font-mono);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1.75rem 2rem;
+  border-top: 3px solid var(--hc-white);
+}
+.hc-footer a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+}
+.hc-footer a:hover { color: var(--hc-white); }
+
+/* ── 13. Responsive ───────────────────────────────────── */
+@media (max-width: 720px) {
+  .hc-toggle { display: flex; }
+  .hc-nav-list {
+    display: none;
+    position: absolute;
+    top: 60px; left: 0; right: 0;
+    background-color: var(--hc-blue);
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+  }
+  .hc-nav-list.open { display: flex; }
+  .hc-hero-inner { flex-direction: column; }
+  .hc-hero-badge { display: none; }
+  .hc-stats-strip { justify-content: center; }
+  .hc-two-col { flex-direction: column; }
+}

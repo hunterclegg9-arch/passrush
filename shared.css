@@ -1,0 +1,124 @@
+/* ── Shared styles for Resume, Tableau, KVN, and Trivia pages ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono&display=swap');
+
+:root {
+  --blue:       #002E5D;   /* BYU Royal Blue */
+  --blue-mid:   #003F80;
+  --blue-light: #1a5fa8;
+  --white:      #ffffff;
+  --off-white:  #f4f7fc;
+  --black:      #0a0a0a;
+  --gray:       #4a5568;
+  --gray-light: #e2e8f0;
+  --gold-acc:   #C5A028;  /* subtle accent only */
+
+  --font-head:  'Playfair Display', Georgia, serif;
+  --font-body:  'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:  'IBM Plex Mono', monospace;
+  --radius:     4px;
+  --tr:         0.2s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--off-white);
+  color: var(--black);
+  line-height: 1.65;
+}
+
+/* ── Nav ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--blue);
+  border-bottom: 3px solid var(--white);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.nav-brand {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+nav ul { list-style: none; display: flex; gap: 0.2rem; }
+nav ul li a {
+  display: block;
+  padding: 0.4rem 0.85rem;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: background var(--tr), color var(--tr);
+  white-space: nowrap;
+}
+nav ul li a:hover, nav ul li a.active {
+  background: rgba(255,255,255,0.15);
+  color: var(--white);
+}
+
+/* hamburger */
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; background: none; border: none; padding: 4px;
+}
+.nav-toggle span {
+  display: block; width: 22px; height: 2px;
+  background: var(--white); border-radius: 2px;
+}
+@media (max-width: 760px) {
+  .nav-toggle { display: flex; }
+  nav ul {
+    display: none; position: absolute; top: 60px; left: 0; right: 0;
+    background: var(--blue); flex-direction: column;
+    padding: 0.75rem 1rem; border-bottom: 2px solid rgba(255,255,255,0.2);
+  }
+  nav ul.open { display: flex; }
+}
+
+/* ── Page header banner ── */
+.page-banner {
+  background: var(--blue);
+  padding: 3rem 2rem 2.5rem;
+  border-bottom: 3px solid var(--white);
+}
+.page-banner h1 {
+  font-family: var(--font-head);
+  font-size: 2.4rem;
+  color: var(--white);
+  margin-bottom: 0.35rem;
+}
+.page-banner p { color: rgba(255,255,255,0.75); font-size: 0.95rem; }
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 0.6rem;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+
+/* ── Footer ── */
+footer {
+  background: var(--blue);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 1.75rem 2rem;
+  margin-top: 4rem;
+  font-size: 0.82rem;
+  border-top: 3px solid var(--white);
+}
+footer a { color: rgba(255,255,255,0.85); text-decoration: none; }

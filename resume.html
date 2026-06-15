@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résumé – Hunter Clegg</title>
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .resume-wrap { max-width: 820px; margin: 3rem auto; padding: 0 2rem; }
+
+    /* Skills tags */
+    .skills-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+    .skill-tag {
+      background: var(--off-white);
+      border: 1px solid var(--gray-light);
+      color: var(--blue);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 2rem;
+      font-weight: 600;
+    }
+
+    /* Section */
+    .r-section { margin-bottom: 2.75rem; }
+    .r-section-title {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      color: var(--blue);
+      border-bottom: 2px solid var(--blue);
+      padding-bottom: 0.35rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Entry */
+    .r-entry { margin-bottom: 1.6rem; }
+    .r-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin-bottom: 0.1rem;
+    }
+    .r-title { font-weight: 700; font-size: 1rem; color: var(--black); }
+    .r-date  { font-family: var(--font-mono); font-size: 0.7rem; color: var(--gray); letter-spacing: 0.06em; }
+    .r-sub   {
+      font-size: 0.875rem;
+      color: var(--blue-light);
+      margin-bottom: 0.45rem;
+    }
+    .r-sub .r-loc { color: var(--gray); font-style: normal; }
+
+    ul.r-bullets {
+      padding-left: 1.2rem;
+      color: var(--gray);
+      font-size: 0.875rem;
+      line-height: 1.75;
+    }
+    ul.r-bullets li { margin-bottom: 0.15rem; }
+
+    /* Awards grid */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .award-item {
+      background: var(--off-white);
+      border-left: 3px solid var(--blue);
+      padding: 0.6rem 1rem;
+      font-size: 0.875rem;
+      color: var(--gray);
+      border-radius: 0 4px 4px 0;
+    }
+
+    @media (max-width: 580px) {
+      .awards-grid { grid-template-columns: 1fr; }
+      .r-entry-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="index.html">Hunter Clegg</a>
+    <button class="nav-toggle" aria-label="Toggle menu"
+      onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html" class="active">Résumé</a></li>
+      <li><a href="tableau.html">Tableau</a></li>
+      <li><a href="kvn.html">Kyle Van Noy</a></li>
+      <li><a href="trivia.html">Trivia Game</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-banner">
+    <div class="container">
+      <p class="eyebrow">Curriculum Vitae</p>
+      <h1>Hunter Clegg</h1>
+      <p>hclegg2@byu.edu &nbsp;·&nbsp; (513) 301-6886 &nbsp;·&nbsp; American Fork, UT</p>
+    </div>
+  </div>
+
+  <div class="resume-wrap">
+
+    <!-- Skills -->
+    <div class="skills-row">
+      <span class="skill-tag">Financial Modeling</span>
+      <span class="skill-tag">LBO Analysis</span>
+      <span class="skill-tag">Valuation</span>
+      <span class="skill-tag">Sales</span>
+      <span class="skill-tag">Leadership</span>
+      <span class="skill-tag">Armenian – Fluent</span>
+      <span class="skill-tag">Communication</span>
+      <span class="skill-tag">Entrepreneurship</span>
+    </div>
+
+    <!-- Education -->
+    <div class="r-section">
+      <div class="r-section-title">🎓 Education</div>
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-title">Brigham Young University</span>
+          <span class="r-date">Expected Dec 2028</span>
+        </div>
+        <div class="r-sub">Pre-Business &nbsp;<span class="r-loc">· Provo, UT</span></div>
+        <ul class="r-bullets">
+          <li>GPA: 3.92 / 4.00</li>
+          <li>BYU Football – Full-ride athletic scholarship</li>
+          <li>All BIG XII: Freshman Defensive Player of the Year – Honorable Mention</li>
+          <li>Clubs: BYU Finance Society, Private Equity &amp; Venture Capital Association, Investment Banking Association</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="r-section">
+      <div class="r-section-title">💼 Experience</div>
+
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-title">BYU Private Equity LBO Case Competition</span>
+          <span class="r-date">Mar 2026</span>
+        </div>
+        <div class="r-sub">Participant &nbsp;<span class="r-loc">· Provo, UT &nbsp;(Sponsored by BYU PE/VC Association)</span></div>
+        <ul class="r-bullets">
+          <li>Conducted a full LBO analysis on YETI (NYSE: YETI), including financial modeling, valuation, and return projections</li>
+          <li>Presented pitch deck and LBO model to a panel of judges, defending investment thesis and model assumptions</li>
+          <li>Collaborated in a team to develop financial models and evaluate key value drivers</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-title">Quick Quack Car Wash</span>
+          <span class="r-date">Nov 2022 – Jan 2023</span>
+        </div>
+        <div class="r-sub">Team Member &nbsp;<span class="r-loc">· American Fork, UT</span></div>
+        <ul class="r-bullets">
+          <li>Became a top membership seller by maintaining a 20%+ conversion rate through persuasive communication</li>
+          <li>Cultivated a high-performance work ethic in a fast-paced environment, consistently exceeding sales quotas</li>
+          <li>Facilitated customer service, operated car wash systems, and upheld maintenance standards</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-title">Clegg Lawn Care</span>
+          <span class="r-date">Mar 2019 – Nov 2022</span>
+        </div>
+        <div class="r-sub">Owner &nbsp;<span class="r-loc">· American Fork, UT</span></div>
+        <ul class="r-bullets">
+          <li>Built a successful lawn care business serving multiple clients while maintaining consistent quality</li>
+          <li>Developed strong skills in marketing, communication, attention to detail, and entrepreneurial leadership</li>
+          <li>Earned over $10,000 to independently cover personal and school-related expenses throughout high school</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Volunteer -->
+    <div class="r-section">
+      <div class="r-section-title">🤝 Volunteer Service</div>
+
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-title">Y-Serve Faith-Based Athletic Camp for Youth</span>
+          <span class="r-date">Apr 2025 – Jun 2025</span>
+        </div>
+        <div class="r-sub">Camp Organizer, Mentor &nbsp;<span class="r-loc">· Provo, UT</span></div>
+        <ul class="r-bullets">
+          <li>Coordinated logistics and curriculum for a BYU faith-based youth athletic program with 50+ participants</li>
+          <li>Collaborated with student-athletes and faculty from BYU and Baylor University to organize camp operations</li>
+          <li>Provided mentorship integrating athletic development, spiritual growth, and personal discipline</li>
+        </ul>
+      </div>
+
+      <div class="r-entry">
+        <div class="r-entry-header">
+          <span class="r-title">The Church of Jesus Christ of Latter-day Saints</span>
+          <span class="r-date">Feb 2023 – Dec 2024</span>
+        </div>
+        <div class="r-sub">Volunteer Representative &nbsp;<span class="r-loc">· Armenia</span></div>
+        <ul class="r-bullets">
+          <li>Strengthened communities and families by building faith, providing service, and teaching English</li>
+          <li>Served as a leader overseeing church events, community outreach, and conferences with 100+ attendees</li>
+          <li>Became fluent in Armenian (reading, writing, and speaking) after hundreds of hours of study</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Awards -->
+    <div class="r-section">
+      <div class="r-section-title">🏆 Awards &amp; Interests</div>
+      <div class="awards-grid">
+        <div class="award-item">2× All-State Football Selection (Utah)</div>
+        <div class="award-item">2023 Adidas All-American Football Selection</div>
+        <div class="award-item">2× Elected Football Team Captain (100+ teammates)</div>
+        <div class="award-item">All BIG XII Freshman Defensive Player – HM</div>
+        <div class="award-item">Armenian – Conversationally Fluent</div>
+        <div class="award-item">Rubik's Cube – Personal Best: 16 seconds</div>
+        <div class="award-item">Volunteer: Tabitha's Way &amp; Provo Food Bank</div>
+        <div class="award-item">Dystopian novels: Hunger Games, Scythe, Ender's Game</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Hunter Clegg &nbsp;·&nbsp; <a href="mailto:hclegg2@byu.edu">hclegg2@byu.edu</a></p>
+  </footer>
+
+</body>
+</html>

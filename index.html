@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hunter Clegg – BYU Football</title>
+  <!-- From-scratch stylesheet only — NO Bootstrap -->
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────── -->
+  <nav class="hc-nav">
+    <a class="hc-brand" href="index.html">Hunter Clegg</a>
+    <ul class="hc-nav-list" id="hc-nav-list">
+      <li><a href="index.html" class="hc-active">Home</a></li>
+      <li><a href="resume.html">Résumé</a></li>
+      <li><a href="tableau.html">Tableau</a></li>
+      <li><a href="kvn.html">Kyle Van Noy</a></li>
+      <li><a href="trivia.html">Trivia Game</a></li>
+    </ul>
+    <button class="hc-toggle" aria-label="Toggle menu"
+      onclick="document.getElementById('hc-nav-list').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── HERO (custom background color) ──────────────── -->
+  <header class="hc-hero" id="top">
+    <div class="hc-hero-inner">
+      <div class="hc-hero-text">
+        <p class="hc-eyebrow">BYU Cougars · Est. 1922</p>
+        <h1 class="hc-hero-title">Rise &amp; Shout,<br /><span class="hc-accent">The Cougars Are Out</span></h1>
+        <p class="hc-hero-sub">
+          A fan's guide to BYU football — the history, the legends,
+          the tradition, and the pride of Provo, Utah.
+        </p>
+        <div class="hc-cta-row">
+          <a href="#facts" class="hc-btn">Fun Facts ↓</a>
+          <a href="#fight-song" class="hc-btn hc-btn-outline">Fight Song ↓</a>
+        </div>
+      </div>
+      <div class="hc-hero-badge">
+        <div class="hc-badge-num">1984</div>
+        <div class="hc-badge-label">National Champions</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── QUICK STATS STRIP ─────────────────────────────── -->
+  <div class="hc-stats-strip" id="stats">
+    <div class="hc-stat">
+      <span class="hc-stat-num">13-0</span>
+      <span class="hc-stat-desc">1984 Championship Record</span>
+    </div>
+    <div class="hc-stat">
+      <span class="hc-stat-num">1</span>
+      <span class="hc-stat-desc">Heisman Trophy Winner</span>
+    </div>
+    <div class="hc-stat">
+      <span class="hc-stat-num">63K</span>
+      <span class="hc-stat-desc">Stadium Capacity</span>
+    </div>
+    <div class="hc-stat">
+      <span class="hc-stat-num">30+</span>
+      <span class="hc-stat-desc">Bowl Appearances</span>
+    </div>
+  </div>
+
+  <!-- ── FIGHT SONG VIDEO ──────────────────────────────── -->
+  <section class="hc-section" id="fight-song">
+    <div class="hc-section-inner">
+      <p class="hc-label">The Anthem</p>
+      <h2 class="hc-section-title">BYU Fight Song</h2>
+      <p class="hc-section-desc">
+        "Rise and Shout" has echoed through LaVell Edwards Stadium for decades.
+        Hear it performed live and feel the energy of Cougar Nation.
+      </p>
+      <div class="hc-video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/7f3AwUN1XE4"
+          title="BYU Fight Song – Rise and Shout"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BYU IMAGE ─────────────────────────────────────── -->
+  <section class="hc-section hc-alt-bg" id="about">
+    <div class="hc-section-inner">
+      <p class="hc-label">The Program</p>
+      <h2 class="hc-section-title">About BYU Football</h2>
+      <div class="hc-two-col">
+        <div class="hc-col-text">
+          <p>
+            Brigham Young University football has produced some of the most
+            innovative offenses and decorated players in college football history.
+            Under legendary coach LaVell Edwards, BYU became synonymous with the
+            passing game long before it was mainstream.
+          </p>
+          <p>
+            Today, competing in the Big 12 Conference, the Cougars continue to
+            build on that legacy — sending players to the NFL, winning bowl games,
+            and inspiring a passionate fanbase that spans the globe.
+          </p>
+          <p>
+            I play for BYU on a full athletic scholarship, and every day on that
+            field is a reminder of the tradition I get to be part of.
+          </p>
+        </div>
+        <div class="hc-col-img">
+          <!-- Image NOT from Bootstrap -->
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/BYU_Cougars_logo.svg/800px-BYU_Cougars_logo.svg.png"
+            alt="BYU Cougars Logo"
+            class="hc-logo-img"
+          />
+          <p class="hc-img-caption">BYU Cougars — Provo, Utah</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FUN FACTS (ordered list with nested unordered) ── -->
+  <section class="hc-section" id="facts">
+    <div class="hc-section-inner">
+      <p class="hc-label">Did You Know?</p>
+      <h2 class="hc-section-title">Fun Facts About BYU Football &amp; BYU</h2>
+
+      <ol class="hc-facts-list">
+        <li>
+          <strong>BYU won the 1984 National Championship</strong>
+          <p>The Cougars finished 13-0, the first team ever to complete an undefeated season and be crowned national champions. Key contributors that year included:</p>
+          <ul class="hc-nested-list">
+            <li>QB Robbie Bosco, who threw for 3,875 yards despite playing injured</li>
+            <li>Coach LaVell Edwards, who masterminded the attack</li>
+            <li>A Holiday Bowl victory over Michigan to seal the title</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Ty Detmer won the 1990 Heisman Trophy</strong>
+          <p>BYU's only Heisman winner threw for over 5,000 yards and 41 TDs in a single season. His records at the time were staggering:</p>
+          <ul class="hc-nested-list">
+            <li>5,188 passing yards — an NCAA record in 1990</li>
+            <li>41 touchdown passes in one season</li>
+            <li>15,031 career passing yards at BYU — a program record</li>
+          </ul>
+        </li>
+        <li>
+          <strong>BYU has produced multiple NFL Hall of Famers</strong>
+          <p>The Cougars have sent elite talent to the NFL for decades. Notable alumni include:</p>
+          <ul class="hc-nested-list">
+            <li>Steve Young — Pro Football Hall of Fame, 3× Super Bowl champion</li>
+            <li>Jim McMahon — led the 1985 Bears to a Super Bowl XX title</li>
+            <li>Zach Wilson — 2nd overall pick in the 2021 NFL Draft</li>
+          </ul>
+        </li>
+        <li>
+          <strong>LaVell Edwards revolutionized college football</strong>
+          <p>Before spread offenses were everywhere, LaVell built passing attacks that changed the sport. His legacy lives on:</p>
+          <ul class="hc-nested-list">
+            <li>257 career wins as BYU head coach (1972–2000)</li>
+            <li>The stadium was renamed in his honor in 2000</li>
+            <li>Inducted into the College Football Hall of Fame in 2004</li>
+          </ul>
+        </li>
+        <li>
+          <strong>BYU joined the Big 12 Conference in 2023</strong>
+          <p>After years as an independent, BYU took a major step up in competition. Highlights so far:</p>
+          <ul class="hc-nested-list">
+            <li>First Big 12 season brought national attention back to Provo</li>
+            <li>LaVell Edwards Stadium holds roughly 63,000 fans</li>
+            <li>The "Holy War" rivalry vs. Utah is one of the most heated in the West</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Interesting facts about BYU the university</strong>
+          <p>Beyond football, BYU itself is a remarkable institution:</p>
+          <ul class="hc-nested-list">
+            <li>Owned and operated by The Church of Jesus Christ of Latter-day Saints</li>
+            <li>Consistently ranked among the top universities for return on investment</li>
+            <li>Students come from all 50 states and over 100 countries worldwide</li>
+            <li>Known for its honor code, academic rigor, and strong business programs</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ── ON-PAGE ANCHOR NAV ────────────────────────────── -->
+  <section class="hc-section hc-alt-bg" id="navigate">
+    <div class="hc-section-inner">
+      <p class="hc-label">On This Page</p>
+      <h2 class="hc-section-title">Jump To</h2>
+      <ul class="hc-anchor-list">
+        <li><a href="#top">↑ Back to Top</a></li>
+        <li><a href="#stats">Quick Stats</a></li>
+        <li><a href="#fight-song">BYU Fight Song</a></li>
+        <li><a href="#about">About BYU Football</a></li>
+        <li><a href="#facts">Fun Facts</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── SITE NAV LINKS ────────────────────────────────── -->
+  <section class="hc-section" id="explore">
+    <div class="hc-section-inner">
+      <p class="hc-label">Explore the Site</p>
+      <h2 class="hc-section-title">Other Pages</h2>
+      <div class="hc-cards">
+        <a href="resume.html" class="hc-card">
+          <span class="hc-card-icon">📄</span>
+          <h3>Résumé</h3>
+          <p>Education, experience, and achievements</p>
+        </a>
+        <a href="tableau.html" class="hc-card">
+          <span class="hc-card-icon">📊</span>
+          <h3>Tableau</h3>
+          <p>Interactive data visualization</p>
+        </a>
+        <a href="kvn.html" class="hc-card">
+          <span class="hc-card-icon">🎬</span>
+          <h3>Kyle Van Noy Highlights</h3>
+          <p>Watch a BYU legend in action</p>
+        </a>
+        <a href="trivia.html" class="hc-card">
+          <span class="hc-card-icon">🏆</span>
+          <h3>Trivia Game</h3>
+          <p>Test your BYU football knowledge</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="hc-footer">
+    <p>© 2026 Hunter Clegg &nbsp;·&nbsp; <a href="mailto:hclegg2@byu.edu">hclegg2@byu.edu</a> &nbsp;·&nbsp; Built from scratch — no Bootstrap</p>
+  </footer>
+
+</body>
+</html>
