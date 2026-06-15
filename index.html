@@ -112,11 +112,19 @@
         </div>
         <div class="hc-col-img">
           <!-- Image NOT from Bootstrap -->
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/BYU_Cougars_logo.svg/800px-BYU_Cougars_logo.svg.png"
-            alt="BYU Cougars Logo"
-            class="hc-logo-img"
-          />
+          <!-- BYU Cougars wordmark — inline SVG, no external dependency -->
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="hc-logo-img" aria-label="BYU Cougars Logo" role="img">
+            <!-- Blue shield background -->
+            <path d="M100 10 L175 45 L175 130 Q175 170 100 192 Q25 170 25 130 L25 45 Z" fill="#002E5D"/>
+            <!-- White inner shield border -->
+            <path d="M100 22 L163 52 L163 128 Q163 162 100 180 Q37 162 37 128 L37 52 Z" fill="none" stroke="white" stroke-width="3"/>
+            <!-- BYU text -->
+            <text x="100" y="95" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="white" letter-spacing="2">BYU</text>
+            <!-- COUGARS text -->
+            <text x="100" y="135" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="white" letter-spacing="3">COUGARS</text>
+            <!-- Decorative line -->
+            <line x1="55" y1="108" x2="145" y2="108" stroke="white" stroke-width="1.5" opacity="0.6"/>
+          </svg>
           <p class="hc-img-caption">BYU Cougars — Provo, Utah</p>
         </div>
       </div>
