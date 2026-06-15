@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pass Rush | The Art of Getting to the QB</title>
+  <link rel="stylesheet" href="passrush-style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav-bar">
+    <span class="logo">PASS RUSH</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Résumé</a></li>
+      <li><a href="app.html">Scouting App</a></li>
+      <li><a href="#techniques">Techniques</a></li>
+      <li><a href="#film">Film Room</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-div">
+    <p class="tagline">The Most Dangerous Position in Football</p>
+    <h1>GET TO THE QUARTERBACK</h1>
+    <p>Pass rushing is chess at 4.4 speed — a ballet of leverage, timing, and violence that determines games before the ball is even thrown.</p>
+    <a href="#techniques" class="cta-btn">Explore the Craft</a>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-div">
+
+    <!-- STATS SECTION -->
+    <section>
+      <p class="section-label">By the Numbers</p>
+      <h2>Why Pass Rush Wins Championships</h2>
+      <div class="stats-div">
+        <div class="stat-card">
+          <span class="number">2.5s</span>
+          <span class="label">Average Time to Throw</span>
+        </div>
+        <div class="stat-card">
+          <span class="number">30%</span>
+          <span class="label">Sack Rate Under Pressure</span>
+        </div>
+        <div class="stat-card">
+          <span class="number">22%</span>
+          <span class="label">SB Teams Lead in Sacks</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE SECTION -->
+    <section>
+      <p class="section-label">The Science</p>
+      <h2>Leverage is Everything</h2>
+      <p>The best pass rushers in NFL history weren't just fast — they were students of body mechanics, offensive tendencies, and situational football.</p>
+      <div class="image-container">
+        <!-- Free-use image of a football defensive lineman -->
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/American_football_icon.svg/800px-American_football_icon.svg.png"
+          alt="Pass rush illustration — low pad level and burst off the line"
+        />
+        <p class="image-caption">Figure 1 — Pad level and first-step quickness are the foundation of every elite pass rush move.</p>
+      </div>
+    </section>
+
+    <!-- ON-PAGE ANCHOR TARGET -->
+    <section id="techniques" class="anchor-target">
+      <p class="section-label">The Playbook</p>
+      <h2>Core Pass Rush Techniques</h2>
+      <p>Every move in a pass rusher's arsenal has a counter — and a counter to that counter. The best rushers chain two or three together.</p>
+
+      <!-- ORDERED LIST WITH EMBEDDED UNORDERED LISTS (required element) -->
+      <ol class="moves-list">
+        <li>
+          Speed / Contain Moves
+          <ul>
+            <li>Speed rush — flat path around the tackle using speed-to-power conversion</li>
+            <li>Ghost / dip — bending the edge with a flattened back angle</li>
+            <li>Spin move — 360° rotation off a planted foot to beat an over-set tackle</li>
+          </ul>
+        </li>
+        <li>
+          Power Moves
+          <ul>
+            <li>Bull rush — drive the blocker backward into the pocket using leverage and leg drive</li>
+            <li>Push-pull — set up with a push to create extension, then yank the blocker past</li>
+            <li>Long stick — initial punch to the chest to control the blocker's hands</li>
+          </ul>
+        </li>
+        <li>
+          Hand Fighting Techniques
+          <ul>
+            <li>Swipe — knock the blocker's inside hand away to break the grip</li>
+            <li>Rip — underhand move driving under the blocker's arm</li>
+            <li>Swim — overhand move over the blocker's arm to clear the shoulder</li>
+            <li>Chop — attacking the blocker's hands at the wrists before contact</li>
+          </ul>
+        </li>
+        <li>
+          Counter Moves
+          <ul>
+            <li>Inside counter (hump / spin inside) — after selling the edge</li>
+            <li>Chop-and-go — stun the hands then convert to a speed rush</li>
+            <li>Club-and-rip — club the outside arm then rip underneath</li>
+          </ul>
+        </li>
+        <li>
+          Situational Awareness
+          <ul>
+            <li>Reading set tendencies — kick slide vs. vertical set vs. slide protection</li>
+            <li>Recognizing screen and draw calls from the blocker's body language</li>
+            <li>Working in tandem — coordinating stunts and loops with an interior rusher</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FILM ROOM / VIDEO (required: embedded YouTube) -->
+    <section id="film" class="anchor-target">
+      <div class="video-div">
+        <p class="section-label">Film Room</p>
+        <h2>Watching the Best Do It</h2>
+        <p>Breaking down Myles Garrett — widely considered the most complete pass rusher in the NFL — and why his combination of power, bend, and hand technique is so difficult to block.</p>
+        <div class="video-wrapper">
+          <!-- YouTube: pass rush technique breakdown (no autoplay) -->
+          <iframe
+            src="https://www.youtube.com/embed/T8EG3mBbvgE"
+            title="Pass Rush Technique Breakdown"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLEAU EMBED (placeholder — replace src with your chosen Tableau Public URL) -->
+    <section id="data" class="anchor-target">
+      <p class="section-label">Analytics</p>
+      <h2>Pass Rush Data Visualization</h2>
+      <p>Interactive NFL pass rush win rate data. Explore pressure rates, sack totals, and efficiency metrics by player and team.</p>
+      <div class="tableau-section">
+        <div class='tableauPlaceholder' id='viz1' style='position: relative; width:100%; height:600px;'>
+          <noscript>
+            <a href='#'>
+              <img alt='NFL Pass Rush Stats' src='https://public.tableau.com/static/images/placeholder.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz' style='width:100%;height:600px;display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <!-- REPLACE the line below with your chosen Tableau Public viz path -->
+            <param name='path' value='views/NFLPassRushStats/Dashboard1' />
+            <param name='toolbar' value='yes' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+          </object>
+          <!-- Fallback message until Tableau viz is configured -->
+          <p style="color:var(--stat-silver); font-family:'Roboto Mono',monospace; font-size:0.85rem; padding:2rem; text-align:center;">
+            📊 Tableau visualization goes here.<br/>
+            Find a pass rush viz at <a href="https://public.tableau.com" target="_blank">public.tableau.com</a>, then replace the &lt;param name='path'&gt; value above with its embed path.
+          </p>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width = '100%';
+          vizElement.style.height = '600px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
+    </section>
+
+    <!-- LINK TO AI APP -->
+    <section style="text-align:center; padding: 4rem 0;">
+      <p class="section-label">AI-Powered Tool</p>
+      <h2>Scout Any Pass Rusher</h2>
+      <p>Use our AI Scouting Report Generator to break down any pass rusher's strengths, weaknesses, and signature moves.</p>
+      <a href="app.html" class="cta-btn" style="margin-top:1rem; display:inline-block;">Open Scouting App →</a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Pass Rush Project &nbsp;|&nbsp; <a href="index.html">Home</a> &nbsp;|&nbsp; <a href="resume.html">Résumé</a> &nbsp;|&nbsp; <a href="app.html">Scouting App</a></p>
+  </footer>
+
+</body>
+</html>
